@@ -1,0 +1,5 @@
+python -m venv venv 
+.\venv\Scripts\activate
+pip freeze > requirements.txt
+pip install -r requirements.txt
+pyinstaller --onefile --icon=C:\Users\Utilisateur\Desktop\depthGenerator\icon\icon.png --hidden-import=Imath src\main.py

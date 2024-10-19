@@ -4,10 +4,10 @@ from PIL import Image
 from transformers import pipeline, AutoImageProcessor, AutoModelForDepthEstimation
 import torch
 import OpenEXR
-from PySide2.QtWidgets import QApplication, QLabel, QVBoxLayout, QWidget, QProgressBar
-from PySide2.QtGui import QIcon, QPalette, QColor
-from PySide2.QtCore import QThread, Qt, Signal
-from PySide2 import QtCore
+from PySide6.QtWidgets import QApplication, QLabel, QVBoxLayout, QWidget, QProgressBar
+from PySide6.QtGui import QIcon, QPalette, QColor
+from PySide6.QtCore import QThread, Qt, Signal
+from PySide6 import QtCore
 import sys
 
 class DepthGenerationThread(QThread):
@@ -133,7 +133,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-# activation env virtuel et compilation .exe :
-# .\venv\Scripts\activate
-# pyinstaller --onefile --icon=C:\Users\Utilisateur\Desktop\depthGenerator\icon\icon.png --hidden-import=Imath src\main.py
